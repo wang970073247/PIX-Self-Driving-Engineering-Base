@@ -63,14 +63,14 @@ object_detection
     
 - 修改 `generate_tfrecord.py`
     - 原代码：
-    ```python
+    ```
       # Create train data:
       python generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=train.record
       # Create test data:
       python generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=test.record
     ```
     改为：
-    ```python   
+    ```   
       # Create train data:
       python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record
       # Create test data:
