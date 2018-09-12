@@ -8,8 +8,7 @@
         - [Autoware 安装](./autoware_install.md)
 - 第二天
     1. **Alex** 分享演讲 Autoware
-    2. 训练分类器
-        - [训练目标检测器](./tensorflow_api.md)
+    2. [训练目标检测器](./tensorflow_api.md)
 - 第三天
     1. 真车实践
     2. 迭代优化
