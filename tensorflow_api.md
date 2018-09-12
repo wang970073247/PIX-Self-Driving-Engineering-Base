@@ -231,7 +231,7 @@ python export_inference_graph \
     --trained_checkpoint_prefix path/to/model.ckpt \
     --output_directory path/to/exported_model_directory
 ```
-    调整为：
+  调整为：
 ```
 python3 export_inference_graph.py \
     --input_type image_tensor \
