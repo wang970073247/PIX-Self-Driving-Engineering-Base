@@ -3,7 +3,7 @@
 系统为 Ubuntu 16.04
 
 安装 ROS Kinetic
-``` linux
+```bash
 $ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
 $ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 $ sudo apt-get update
@@ -16,7 +16,7 @@ $ source ~/.bashrc
 $ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
 ```
 测试：
-```linux
+```bash
 $ roscore
 ```
 无错误提示，并正在运行，安装成功
