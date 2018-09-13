@@ -22,25 +22,25 @@ $ ./run
 ```
 ## 配置Autoware
 ### 步骤 1：
-![step_0](./img/step_0)
+![step_0](./img/step_0.png)
 ### 步骤 2：
-![step_0](./img/step_0)
+![step_1](./img/step_1.png)
 ### 步骤 3：
-![step_0](./img/step_0)
+![step_2](./img/step_2.png)
 ### 步骤 4：
-![step_0](./img/step_0)
+![step_3](./img/step_3.png)
 ### 步骤 5：
-![step_0](./img/step_0)
+![step_4](./img/step_4.png)
 ### 步骤 6：
-![step_0](./img/step_0)
+![step_5](./img/step_5.png)
 ### 步骤 7：
-![step_0](./img/step_0)
+![step_6](./img/step_6.png)
 ### 步骤 8：
-![step_0](./img/step_0)
+![step_7](./img/step_7.png)
 ### 步骤 9：
-![step_0](./img/step_0)
+![step_8](./img/step_8.png)
 ### 步骤 10：
-![step_0](./img/step_0)
+![step_9](./img/step_9.png)
 
 
 ## 其他帮助
