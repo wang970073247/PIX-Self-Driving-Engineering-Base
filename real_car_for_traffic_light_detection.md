@@ -48,11 +48,12 @@ $ ./run
 ```bash
 $ rosrun rqt_image_view rqt_image_view
 ```
-2. 分类结果通过话题/chatter传输给Autoware，你可以打开另外一个中断查看这个话题的发布：
+2. 分类结果通过话题`/chatter`传输给 Autoware，你可以打开另外一个中断查看这个话题的发布：
 ```bash
 $ rostopic echo /chatter
 ```
-3. 你可以打开ros节点关系图，查看分类器，Autoware相关节点和相机节点的连接：
+3. 你可以打开 ROS 节点关系图，查看分类器，Autoware 相关节点和相机节点的连接：
 ```bash
 $ rosrun rqt_graph rqt_graph
 ```
+![rqt_graph](./img/rqt_graph.png)
