@@ -18,7 +18,7 @@ $ rm -rf cuda-<x.x>/
 
 [官网](https://developer.nvidia.com/cuda-toolkit-archive) 下载对应版本的 CUDA。
 
-下载网络版 [`cuda-repo-ubuntu1604_9.0.176-1_amd64.deb`](https://developer.nvidia.com/cuda-90-download-archive?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=debnetwork) 文件，然后把它上传的服务器中，使用命令是 `rz`，该命令使用以下命令安装：
+下载网络版 [`cuda-repo-ubuntu1604_9.0.176-1_amd64.deb`](http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb) 文件，然后把它上传的服务器中，使用命令是 `rz`，该命令使用以下命令安装：
 ```bash
 $ sudo apt-get install lrzsz
 ```
