@@ -1,5 +1,6 @@
 ## 检测器
-将训练好的检测器的所有文件
+将训练好的检测器的所有文件（即`frozen_inference_graph.pb`所在路径下的所有文件）
+例：
 ```
 -checkpoint
 -frozen_inference_graph.pb
