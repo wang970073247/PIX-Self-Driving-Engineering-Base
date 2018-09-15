@@ -52,4 +52,4 @@ ROS 用 Compute Graphs 来可视化 Nodes 和 Topics 的连接方式。这可以
 ![rqt_graph](./img/rqt_graph.png)
 ROS 提供了一个工具 叫做 rqt_graph 可以显示系统的 Compute Graphs。
 ![compute_graph](./img/compute_graph.png)
-一个中度复杂的机器人可能有几十个 Nodes。Topic 数更多，还有很多 Service。Compute Graphs 允许你放大并平移图形，并准确选择显示哪些信息。
+一个中度复杂的机器人可能有几十个 Nodes。Topics 数更多，还有很多 Services。Compute Graphs 允许你放大并平移图形，并准确选择显示哪些信息。
