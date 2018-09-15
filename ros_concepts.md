@@ -47,3 +47,9 @@ Publisher 和 Subscriber 之间在 Topic 上传递 Message，非常有用，但�
 Request 信息服务可以是一个定制的 Message 类型，叫曝光时间；Respond 可以是一个图像类型。
 
 向 Service 发起调用 Request 后，执行的 Node 或任何其他类似 Nodes 都能 Request 摄像头根据给定曝光时间捕捉一幅图像。然后，摄像头节点会 Respond  一条包括结果图像的 Message。
+## Compute Graphs
+ROS 用 Compute Graphs 来可视化 Nodes 和 Topics 的连接方式。这可以帮助我们了解有哪些 Nodes，以及它们如何互相沟通。
+![rqt_graph](./img/rqt_graph.png)
+ROS 提供了一个工具 叫做 rqt_graph 可以显示系统的 Compute Graphs。
+![compute_graph](./img/compute_graph.png)
+一个中度复杂的机器人可能有几十个 Nodes。Topic 数更多，还有很多 Service。Compute Graphs 允许你放大并平移图形，并准确选择显示哪些信息。
