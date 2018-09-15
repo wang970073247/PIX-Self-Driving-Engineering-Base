@@ -17,3 +17,9 @@
 2. 将 `./mindvision/` 移动到 `/home/up/Autoware/ros/src/`
 3. 将 `./vehicle_sender.cpp` 覆盖到 `/home/up/Autoware/ros/src/socket/packages/vehicle_socket/nodes/vehicle_sender/`
 4. 将 `./launch/` 覆盖到 `/home/up/Autoware/ros/`。
+## 安装依赖包
+
+在本目录下运行以下命令：
+```bash
+pip3 install -r requirements.txt
+```
