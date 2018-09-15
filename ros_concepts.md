@@ -41,7 +41,9 @@ Publisher 和 Subscriber 之间在 Topic 上传递 Message，非常有用，但�
 ![services](./img/service.png)
 和 Topics 一样 服务允许节点间传递信息。但是 和 Topics 不同，Services 不是并非信息转移，它没有相关联的 Publishers 和 Subscribers。相反 Nodes 通过 Services 互动时，它们是1对1的，并使用 Request/Respond  Message 进行沟通。
 ![request_respond](./img/request_respond.png)
-我们看看在我们正在开发的例子中 Service 是如何应用的。假设行为执行器 Node 想要捕捉来自摄像头的一幅图像。我们为摄像头节点定义一个 Service，我们称之为图像捕捉 Service。
-Request 信息服务可以是一个定制 Message 类型，叫做曝光时间；Respond 可以是一个图像类型。
-向图像捕捉 Service 发起服务调用后，行为执行器 Node 或任何其他类似 Nodes
-我们只需让它 Subscribe 摄像头图像 Topic 即可。都能请求摄像头根据给定曝光时间和设置捕捉一幅图像。然后，摄像头节点会 Request/Respond 发送一条包括结果图像的 Message。
+我们看看在我们正在开发的例子中 Service 是如何应用的。
+
+假设行为执行器 Node 想要捕捉来自摄像头的一幅图像。摄像头节点定义一个 Service。
+Request 信息服务可以是一个定制的 Message 类型，叫曝光时间；Respond 可以是一个图像类型。
+
+向 Service 发起调用 Request 后，执行的 Node 或任何其他类似 Nodes 都能 Request 摄像头根据给定曝光时间捕捉一幅图像。然后，摄像头节点会 Respond  一条包括结果图像的 Message。
