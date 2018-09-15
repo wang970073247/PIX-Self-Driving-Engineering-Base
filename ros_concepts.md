@@ -28,3 +28,11 @@ Topic 可以看做 Node 之间传递消息的管道。要在一个 Topic 上发�
 
 所以 Node 网络通过 Topic 连接我们称之为 Pub/Sub 架构。
 ## Message
+![message](./img/message.png)
+Topic 上的 Message 有许多类型。
+预定义的 Message 类型，可直接使用有物理数量通信所需的 Message 类型，如位置、速度、加速度、旋转和持续时间。
+
+还有传感器度数通信所需的 Message，如激光扫描、图像、点云、惯性测量值等等。
+
+完整的 ROS 安装中可用的 Message 类型数量实际上非常庞大。
+但是，即便有这么多有用的 Message 类型，有时候我们仍需要自己定义新的类型。
