@@ -9,6 +9,7 @@
   ```
   在弹出的对话框中选择 `apt-get`。
   - 使用
+  
   安装完成之后使用方法和 `apt-get` 是一样的。
   ```bash
   sudo apt-fast install <software>
