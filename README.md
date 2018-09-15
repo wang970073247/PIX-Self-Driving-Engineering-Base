@@ -1,4 +1,4 @@
-# 欢迎来到由 PIX & Udacity & Tier 联合举办的无人驾驶实训基地
+# 欢迎来到由 PIX & Udacity & TierIV 联合举办的无人驾驶实训基地
 ## 实训流程安排
 ### Day 1
 - 9:00 AM - 12:00 PM
