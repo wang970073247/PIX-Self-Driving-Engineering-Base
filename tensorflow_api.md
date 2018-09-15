@@ -257,6 +257,8 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 # switch back to object_detection after this and re run the above command
 ```
 执行后回到 `/object_deteciotn`目录下，重新执行上述程序。
-若执行成功会有 `/pix` 的文件夹，其中，`frozen_inference_graph.pb`很重要。这个就是我们训练好的模型，拿这样的模型，我们就可以进行训练了。
+若执行成功会有 `/pix` 的文件夹，其中，`frozen_inference_graph.pb`很重要。
+
+在进行真车实践之前，先去官网的 [notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb) 修改相关测试图片的代码做一遍测试，若测试结果很理想，就可以进行下一步，[配置相关文件](./config_doc.md)。
 
 感谢 [Sentdex](https://pythonprogramming.net/introduction-use-tensorflow-object-detection-api-tutorial/) 提供的教学，详细资讯请参考 [TensorFlow 官方教程](https://github.com/tensorflow/models/tree/master/research/object_detection)。
