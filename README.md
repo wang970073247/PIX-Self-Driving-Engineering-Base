@@ -48,6 +48,7 @@
     - 庆功晚宴：与同学、导师一起庆祝你在实训期间取得的进步与成果！
     
 其他资料：
+- [ROS 基本概念](./ros_concepts.md)
 - [Docker 极简使用手册](./docker_simple_tutorial.md)
 - [终端远程使用指南](./remote.md)
 
