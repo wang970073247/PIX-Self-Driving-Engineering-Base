@@ -54,7 +54,7 @@
 - [ROS 基本概念](./ros_concepts.md)
 - [Docker 极简使用手册](./docker_simple_tutorial.md)
 - [终端远程使用指南](./remote.md)
-- [安装加速](./speed_up_install.md)
+- [安装提速](./speed_up_install.md)
 
 ## FAQ
 ### 此次无人驾驶工程师线下实训由谁举办？
