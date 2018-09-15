@@ -1,6 +1,6 @@
 ![ROS_cover](./img/ROS_cover.png)
 ## Robotic Structure
-机器人几乎拥有者相同的架构。
+机器人几乎拥有着相同的架构。
 ROS 提供了强劲的通信系统，允许不同组件互相沟通。
 ![robotic_structure](./img/robotic_structure.png)
 机器人从构造上来说，都可以执行三个大致步骤：感知、决策与驱动。
@@ -11,7 +11,7 @@ ROS 管理这三个复杂的步骤时，将每个分解为很多更小的单元�
 例如，系统中可能每个传感器都有相应 Nodes
 此外还有 Nodes 对应位置估算，行为执行和马达控制。
 ## Master
-在 ROS 有一个主 Node 叫 Master，它相当于所有节点的管理器。
+在 ROS 有一个主 Node 叫 Master，它相当于所有节点的管理器。（这只限于 ROS 系统，在 ROS2.0 中已经除去了 Master）
 ![masters](./img/master.png)
 Master 维护着系统上所有 Node 的注册表。它允许每个 Node 发现系统里的其他 Nodes，并与其建立通信线路。
 
@@ -53,3 +53,5 @@ ROS 用 Compute Graphs 来可视化 Nodes 和 Topics 的连接方式。这可以
 ROS 提供了一个工具 叫做 rqt_graph 可以显示系统的 Compute Graphs。
 ![compute_graph](./img/compute_graph.png)
 一个中度复杂的机器人可能有几十个 Nodes。Topics 数更多，还有很多 Services。Compute Graphs 允许你放大并平移图形，并准确选择显示哪些信息。
+
+更多信息请阅读 [ROS 官方 Wiki](http://wiki.ros.org/)
