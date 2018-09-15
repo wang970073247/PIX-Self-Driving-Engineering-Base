@@ -16,7 +16,7 @@ $ rm -rf cuda-<x.x>/
 - CUDA 9.0
 
 
-[官网](https://developer.nvidia.com/cuda-toolkit-archive) 下载对应版本的 CUDA。
+进入 [官网](https://developer.nvidia.com/cuda-toolkit-archive) 下载对应版本的 CUDA。
 
 下载网络版 [`cuda-repo-ubuntu1604_9.0.176-1_amd64.deb`](http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb) 文件，然后把它上传的服务器中，使用命令是 `rz`，该命令使用以下命令安装：
 ```bash
@@ -51,7 +51,7 @@ $ cat /usr/local/cuda/version.txt
 ### 下载和安装 cuDNN
 - cuDNN 7.0.5
 
-进入 [官网](https://developer.nvidia.com/cudnn) 下载 对应版本 cuDNN
+进入 [官网](https://developer.nvidia.com/cudnn) 下载 对应版本 cuDNN （需要注册，可以用微信登录）
 
 若没有指定版本，可以点击 `Archived cuDNN Releases` 选择其他版本。这里选择 `cuDNN v7.0.5 Library for Linux`： 
 下载压缩包并解压：
