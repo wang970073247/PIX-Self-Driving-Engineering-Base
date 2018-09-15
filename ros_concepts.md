@@ -13,7 +13,7 @@ ROS 管理这三个复杂的步骤时，将每个分解为很多更小的单元�
 ## Master
 在 ROS 有一个主 Node 叫 Master，它相当于所有节点的管理器。
 ![masters](./img/master.png)
-Master 维护着系统上所有 Node 的注册表。它允许每个 Node 发现系统里的其他 Node，并与其建立通信线路。
+Master 维护着系统上所有 Node 的注册表。它允许每个 Node 发现系统里的其他 Nodes，并与其建立通信线路。
 
 除了允许 Nodes 相互发现和通信外，Master 还负责作为参数服务器。
 如其名称所示，参数服务器通常用于存储参数和配置值，并在运行 Nodes 中共享。
