@@ -1,4 +1,4 @@
-![logo](./img/logo.png)
+![logo](./img/logo_color.png)
 # PIX & Udacity & TierIV 无人驾驶实训基地欢迎您
 ## 实训流程安排
 ### 第一天
