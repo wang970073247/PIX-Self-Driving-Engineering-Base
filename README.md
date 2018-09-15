@@ -1,5 +1,6 @@
-![logo](./img/color_logo.png)
+
 # PIX & Udacity & TierIV 无人驾驶实训基地欢迎您
+![logo](./img/color_logo.png)
 ## 实训流程安排
 ### 第一天
 - 9:00 AM - 12:00 PM
