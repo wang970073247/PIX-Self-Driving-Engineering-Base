@@ -1,8 +1,23 @@
 ## 安装 TensorFlow GPU 版本
-主要分三步：
+主要分四步：
+- 显卡驱动
 - 安装 CUDA
 - 安装 cuDNN
 - 安装 TensorFlow
+### 显卡驱动
+以安装 Nvidia 驱动 367.27 为例：
+```bash
+$ sudo add-apt-repository ppa:graphics-drivers/ppa
+```
+遇到提示按`Enter`
+```bash
+$ sudo apt-get update 
+$ sudo apt-get install nvidia-367 
+$ sudo apt-get install mesa-common-dev 
+$ sudo apt-get install freeglut3-dev
+```
+重启系统让显卡驱动生效。
+
 ### 卸载 CUDA (Optional)
 ```bash
 $ apt autoremove cuda
