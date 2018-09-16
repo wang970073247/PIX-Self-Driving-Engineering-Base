@@ -10,9 +10,8 @@
     - 新生会：认识你的小伙伴，`5` 人一组选择各自的车辆
 - 13:30 PM - 18:00 PM
     - 小组机器部署
-        - [GPU 版本 Tensorflow 安装](./tensorflow_gpu_install.md)
-        - [ROS 安装](./ros_install.md)
         - [Autoware 安装](./autoware_install.md)
+        - [GPU 版本 Tensorflow 安装](./tensorflow_gpu_install.md)
     - 今日总结与学习心得交换
 
 ### 第 2 天
