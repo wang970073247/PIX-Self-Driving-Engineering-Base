@@ -1,25 +1,51 @@
 # Autoware 安装指南
 
 ## 安装 OpenCV
-以 OpenCV2.4.13 为例，具体步骤如下：
+以 OpenCV2.4.10 为例，具体步骤如下：
+
 ### 安装依赖以及工具<br>
     在命令行中输入：
     ```bash
-    $ sudo apt install build-essential
-    $ sudo apt install cmake git libgtk2.0-dev pkg-config
-    $ sudo apt install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+    $ sudo apt-get install build-essential
+    $ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+    $ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
     ```
 ### 下载对应版本的 OpenCV
     ```bash
-    $ sudo wget https://github.com/Itseez/opencv/archive/2.4.13.zip
+    $ sudo wget https://github.com/Itseez/opencv/archive/2.4.10.zip
     ```
-### 解压并编译文件
+### 编译 OpenCV
     ```bash
-    $ sudo unzip 2.4.13.zip
+    $ sudo apt-get install cmake
+    ```
+    进入 `/opencv` 目录，新建 `/release` 文件夹，进入该目录，然后执行 `cmake `。
+    ```bash
+    $ mkdir release 
+    $ cd release 
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
-    $ make -j4
+    $ sudo make -j4 
     $ sudo make install
     ```
+### 配置opencv的环境变量
+
+    打开opencv.conf文件： 
+    ```bash
+    $ sudo gedit /etc/ld.so.conf.d/opencv.conf 
+    ```
+    在打开的opencv.conf文件中写入：
+    ```bash
+    $ /usr/local/lib 
+    ```
+    保存退出，执行：
+    ```bash
+    $ sudo ldconfig
+    ```
+### 测试是否安装成功
+    直接在终端敲入命令: 
+    ```bash
+    $ pkg-config --modversion opencv 
+    ```
+    显示出版本号2.4.10,说明已经安装成功
 ## 安装 Qt5
 - 通过命令行进行文件下载并进行安装：
     ```bash
