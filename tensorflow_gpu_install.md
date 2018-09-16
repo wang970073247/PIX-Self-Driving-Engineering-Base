@@ -84,3 +84,11 @@ $ python3
 >>>
 ```
 安装成功
+
+若出现
+```
+ImportErrors: libcudnn.so.7: cannot open shared object file: No such file or directory
+```
+请退出 python3 `exit()`
+
+
