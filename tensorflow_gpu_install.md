@@ -91,4 +91,12 @@ ImportErrors: libcudnn.so.7: cannot open shared object file: No such file or dir
 ```
 请退出 python3 `exit()`
 
+请输入：
+```bash
+export PATH=${PATH}:/usr/local/cuda-9.0/bin
+export CUDA_HOME=${CUDA_HOME}:/usr/local/cuda:/usr/local/cuda-9.0
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-9.0/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+```
 
+然后再测试一遍。
