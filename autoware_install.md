@@ -40,7 +40,7 @@
 - 克隆源码
     ```bash
     $ cd ~
-    $ sudo git clone https://github.com/CPFL/Autoware.git --recurse-submodules
+    $ git clone https://github.com/CPFL/Autoware.git --recurse-submodules
     ```
 - 安装 Autoware
     ```bash
