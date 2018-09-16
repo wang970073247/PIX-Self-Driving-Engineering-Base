@@ -63,6 +63,13 @@ $ tar -zxvf cudnn-9.0-linux-x64-v7.tgz
 $ sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/
 $ sudo cp cuda/include/* /usr/local/cuda-9.0/include/
 ```
+并输入：
+```bash
+export PATH=${PATH}:/usr/local/cuda-9.0/bin
+export CUDA_HOME=${CUDA_HOME}:/usr/local/cuda:/usr/local/cuda-9.0
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-9.0/lib64
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
+```
 查看版本信息：
 ```bash
 $ cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
@@ -85,18 +92,3 @@ $ python3
 ```
 安装成功
 
-若出现
-```
-ImportErrors: libcudnn.so.7: cannot open shared object file: No such file or directory
-```
-请退出 python3 `exit()`
-
-请输入：
-```bash
-export PATH=${PATH}:/usr/local/cuda-9.0/bin
-export CUDA_HOME=${CUDA_HOME}:/usr/local/cuda:/usr/local/cuda-9.0
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/cuda-9.0/lib64
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/extras/CUPTI/lib64
-```
-
-然后再测试一遍。
