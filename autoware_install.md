@@ -17,7 +17,7 @@
     ```
 - 解压并编译文件
     ```bash
-    $ sudo unzip opencv-2.4.13
+    $ sudo unzip 2.4.13.zip
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
     $ make -j4
     $ sudo make install
