@@ -1,21 +1,19 @@
 # Autoware 安装指南
 
-## 安装 ROS kinetic
-按照之前的 ROS 安装教程成功安装 ROS kinetic。
 ## 安装 OpenCV
 以 OpenCV2.4.13 为例，具体步骤如下：
-- 安装依赖以及工具<br>
+### 安装依赖以及工具<br>
     在命令行中输入：
     ```bash
     $ sudo apt install build-essential
     $ sudo apt install cmake git libgtk2.0-dev pkg-config
     $ sudo apt install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
     ```
-- 下载对应版本的 OpenCV
+### 下载对应版本的 OpenCV
     ```bash
     $ sudo wget https://github.com/Itseez/opencv/archive/2.4.13.zip
     ```
-- 解压并编译文件
+### 解压并编译文件
     ```bash
     $ sudo unzip 2.4.13.zip
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
@@ -30,19 +28,44 @@
     $ ./qt-opensource-linux-x64-5.11.1.run
     ```
 - 进去安装界面，根据提示安装
+## 安装 ROS
+
+请确认系统为 Ubuntu 16.04
+
+### 安装 ROS Kinetic
+```bash
+$ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
+$ sudo apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+$ sudo apt-get update
+$ sudo apt-get install ros-kinetic-desktop-full
+$ apt-cache search ros-kinetic
+$ sudo rosdep init
+$ rosdep update
+$ echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
+$ sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
+### 测试：
+```bash
+$ roscore
+```
+无错误提示，并正在运行，安装成功
+
+更多资料见 [官网](http://wiki.ros.org/kinetic/Installation/Ubuntu)。
+
 ## 安装 Autoware
 以源码安装方式为例
-- 安装依赖项
+### 安装依赖项
     ```bash
     $ sudo apt-get update
     $ sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-$ROS_DISTRO-catkin libmosquitto-dev
     ```
-- 克隆源码
+### 克隆源码
     ```bash
     $ cd ~
     $ git clone https://github.com/CPFL/Autoware.git --recurse-submodules
     ```
-- 安装 Autoware
+### 安装 Autoware
     ```bash
     $ cd ~/Autoware/ros/src
     $ catkin_init_workspace
@@ -50,7 +73,7 @@
     $ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
     $ ./catkin_make_release
     ```
-- 运行 Autoware
+### 运行 Autoware
     ```bash
     $ cd Autoware/ros 
     $ ./run
