@@ -17,9 +17,8 @@
 - 编译 OpenCV
     ```bash
     $ sudo apt-get install cmake
-    ```
-    进入 `/opencv` 目录，新建 `/release` 文件夹，进入该目录，然后执行 `cmake `。
-    ```bash
+    $ unzip 2.4.10.zip
+    $ cd opencv-2.4.10
     $ mkdir release 
     $ cd release 
     $ cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..
