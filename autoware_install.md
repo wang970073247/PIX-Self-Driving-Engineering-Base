@@ -57,5 +57,5 @@
     ```
 
 
-当然，大家也可以使用 Docker 进行安装。
+当然，大家也可以使用 Docker 安装 Autoware。
 更详细的安装教程，请登录 [官方教程](https://github.com/CPFL/Autoware/wiki/Installation)，并可以学习 [使用手册](https://github.com/CPFL/Autoware-Manuals/blob/master/en/Autoware_UsersManual_v1.1.md)。
