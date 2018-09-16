@@ -41,7 +41,7 @@ export PATH=${CUDA_HOME}/bin:${PATH}
 ```
 
 ```bash
-$ ldconfig
+$ sudo ldconfig
 ```
 查看安装的版本信息：
 ```bash
