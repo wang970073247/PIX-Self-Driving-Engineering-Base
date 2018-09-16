@@ -18,7 +18,7 @@
 ### 第 2 天
 - 9:30 AM - 12:00 PM
     - 演讲分享
-        - 名古屋大学教授 Alex Segura 带你深入掌握 Autoware
+        - 名古屋大学教授 Alex Carballo 带你深入掌握 Autoware
 - 13:30 PM - 18:00 PM
     - 上机操作
         - [采集数据，打标签，训练目标检测器](./tensorflow_api.md)
