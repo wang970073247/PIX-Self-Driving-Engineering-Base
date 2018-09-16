@@ -60,8 +60,8 @@ $ tar -zxvf cudnn-9.0-linux-x64-v7.tgz
 ```
 拷贝这些文件到 CUDA 下：
 ```bash
-$ cp cuda/lib64/* /usr/local/cuda-9.0/lib64/
-$ cp cuda/include/* /usr/local/cuda-9.0/include/
+$ sudo cp cuda/lib64/* /usr/local/cuda-9.0/lib64/
+$ sudo cp cuda/include/* /usr/local/cuda-9.0/include/
 ```
 查看版本信息：
 ```bash
