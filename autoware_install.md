@@ -26,7 +26,7 @@
 - 通过命令行进行文件下载并进行安装：
     ```bash
     $ wget https://download.qt.io/official_releases/qt/5.11/5.11.1/qt-opensource-linux-x64-5.11.1.run
-    $ sudo chrome +x qt-opensource-linux-x64-5.11.1.run
+    $ sudo chmod +x qt-opensource-linux-x64-5.11.1.run
     $ ./qt-opensource-linux-x64-5.11.1.run
     ```
 - 进去安装界面，根据提示安装
@@ -46,7 +46,7 @@
     ```bash
     $ cd ~/Autoware/ros/src
     $ catkin_init_workspace
-    $ cd ../
+    $ cd ..
     $ rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
     $ ./catkin_make_release
     ```
