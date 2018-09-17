@@ -252,10 +252,6 @@ item {
  -xml_to_csv.py
  -generate_tfrecord.py
 ```
-下载 TensorFlow 官方教程
-```bash
-git clone https://github.com/tensorflow/models
-```
 
 将`object_detection/`下所有文件复制粘贴在`models/research/object_detection/legacy/`目录下
 在`legacy/`目录下打开终端：
