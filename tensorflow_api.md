@@ -67,7 +67,13 @@ $ python3 labelImg.py
             xml_df.to_csv('data/{}_labels.csv'.format(directory), index=None)
             print('Successfully converted xml to csv.')
     ```
-    
+    在终端输入：
+    ```bash
+    $ pip3 install pandas
+    $ python3 xml_to_csv.py
+    ```
+    会显示两行的`Successfully converted xml to csv`
+    并且在文件夹`data/`下会看到两个`.csv`文件。
 - 修改 `generate_tfrecord.py`
     - 原代码：
     ```
