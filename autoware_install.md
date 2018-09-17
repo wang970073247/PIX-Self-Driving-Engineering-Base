@@ -100,7 +100,6 @@
     ```
 - 运行 Autoware
     ```bash
-    $ cd Autoware/ros 
     $ ./run
     ```
 
