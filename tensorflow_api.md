@@ -10,8 +10,9 @@ Tensorflow 目标检测 Demo [地址](https://github.com/tensorflow/models/tree/
 进入 [LabelImg](https://github.com/tzutalin/labelImg)，学习使用此 API，并按照流程将采集到的图片分类，并做好方框标签。（比较耗时）
 
 安装流程：
-Python3 on Ubuntu:
+Python3 on Ubuntu16.04:
 ```bash
+$ git clone https://github.com/tzutalin/labelImg
 $ sudo apt-get install pyqt5-dev-tools
 $ sudo pip3 install lxml
 $ make qt5py3
