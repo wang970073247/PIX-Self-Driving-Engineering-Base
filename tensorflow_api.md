@@ -113,7 +113,12 @@ $ python3 labelImg.py
         else:
             None
     ```
-通过运行脚本将数据转换为 TF_records 文件。
+    通过运行脚本将数据转换为 TF_records 文件。
+    ```bash
+    $ python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record
+    $ python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record
+    ```
+    这样，在文件夹`data/`下又会增加两个`.record`文件。
 
 ## 选择 TensorFlow 模型
 从 TensorFlow 模型库中找到合适的 [模型](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)，并找到对应的 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 下载。
