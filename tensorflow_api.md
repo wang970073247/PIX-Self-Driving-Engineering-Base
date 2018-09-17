@@ -29,18 +29,17 @@ $ python3 labelImg.py
 
 首先，统一文件夹目录形式：
 ```
-object_detection
--data/
---test_labels.csv
---train_labels.csv
--images/
---test/
----testingimages.jpg
---train/
----testingimages.jpg
---...yourimages.jpg
--training
--xml_to_csv.py
+-object_detection
+ -data/
+ -images/
+  -test/
+   -testingimages.jpg
+  -train/
+   -testingimages.jpg
+
+ -training
+ -xml_to_csv.py
+ -generate_tfrecord.py
 ```
 - 修改 `xml_to_csv.py`
     ```python
