@@ -298,9 +298,9 @@ python export_inference_graph \
 ```
 python3 export_inference_graph.py \
     --input_type image_tensor \
-    --pipeline_config_path legacy/training/embedded_ssd_mobilenet_v1_coco.config \
-    --trained_checkpoint_prefix legacy/training/model.ckpt<latest_number.meta> \
-    --output_directory pix/
+    --pipeline_config_path legacy/training/ssd_inception_v2_coco.config \
+    --trained_checkpoint_prefix legacy/training/model.ckpt-<latest_number> \
+    --output_directory pix
 ```
 
 ```
