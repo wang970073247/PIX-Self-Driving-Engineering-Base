@@ -1,6 +1,6 @@
 ## TensorFlow API 配置
 Tensorflow 目标检测 Demo [地址](https://github.com/tensorflow/models/tree/master/research/object_detection)。
-根据配置教程，跑通 TensorFlow 目标检测的 Demo。
+根据配置教程，跑通 TensorFlow 目标检测的 notebook。
 ## 采集训练需要用的真实图片。
 共有三种选择：
 1. 可以上车采集真实的图片，红灯，黄灯，绿灯，还有随机图片。
@@ -256,7 +256,7 @@ $ tensorboard --logdir='training/'
 ```
 在浏览器中地址栏输入 `127.0.0.1:6006 `，你讲会看到实时的训练过程。
 
-## 测试
+## 输出
 将自己新建的`/object_detection`中的内容放入到 [官网](https://github.com/tensorflow/models/tree/master/research/object_detection) 中进行合并。可以找到其中`export_inference_graph.py`的文件。
 - 原代码
 ```
@@ -278,15 +278,53 @@ python3 export_inference_graph.py \
 ```
     
 若执行中出现错误，`no module named 'nets'`，转换地址打开终端，执行：
+在`tensorflow/models/`目录终端下执行：
 
 ```bash
 $ # From tensorflow/models/
 export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 # switch back to object_detection after this and re run the above command
 ```
-执行后回到 `/object_deteciotn`目录下，重新执行上述程序。
+执行后回到 `tensorflow/models/tree/master/research/object_detection/`目录下，重新执行上述程序。
 若执行成功会有 `/pix` 的文件夹，其中，`frozen_inference_graph.pb`很重要。
+## 测试
+利用官网 [notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb) 修改相关测试图片的代码做一遍测试。
 
-在进行真车实践之前，先去官网的 [notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb) 修改相关测试图片的代码做一遍测试，若测试结果很理想，就可以进行下一步，[配置相关文件](./config_doc.md)。
+首先将一些红绿灯的测试图片放入`tensorflow/models/tree/master/research/object_detection/test_images/`下。然后修改 tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb 部分代码。
+- 原代码
+```notebook
+# What model to download.
+MODEL_NAME = 'ssd_mobilenet_v1_coco_2017_11_17'
+MODEL_FILE = MODEL_NAME + '.tar.gz'
+DOWNLOAD_BASE = 'http://download.tensorflow.org/models/object_detection/'
+
+# Path to frozen detection graph. This is the actual model that is used for the object detection.
+PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
+
+# List of the strings that is used to add correct label for each box.
+PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
+
+NUM_CLASSES = 90
+```
+改为：
+```
+# What model to download.
+MODEL_NAME = 'pix'
+
+# Path to frozen detection graph. This is the actual model that is used for the object detection.
+PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
+
+# List of the strings that is used to add correct label for each box.
+PATH_TO_LABELS = os.path.join('training', 'object-detection.pbtxt')
+
+NUM_CLASSES = 3
+```
+删除`Download Model`模块。
+
+在`Detection`模块中，修改测试图片的编号。
+
+最后运行整个程序。若测试结果很理想，就可以进行下一步，[配置相关文件](./config_doc.md)。
+
+
 
 感谢 [Sentdex](https://pythonprogramming.net/introduction-use-tensorflow-object-detection-api-tutorial/) 提供的教学，详细资讯请参考 [TensorFlow 官方教程](https://github.com/tensorflow/models/tree/master/research/object_detection)。
