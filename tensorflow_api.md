@@ -21,22 +21,29 @@ $ python3 labelImg.py
 
 最终会导出图片对应的 `.xml` 文件。
 
-之后导出两个文件，一个文件为`/train`，另一个文件为`/test`，比例推荐为`7/3`或者`8/2`。最后共同放在`/data`文件夹中。
+之后建立文件夹树，
+```
+-object_detection/
+ -images/
+  -train/
+  -test/
+```
+将图片以及对应的标签`.xml`文件以推荐比例`7/3`或者`8/2`分别放入文件夹`train/`和`test/`中。
 
 ## 转换数据格式
-
 从 [这里](https://github.com/datitran/raccoon_dataset) 下载`xml_to_csv.py`与`generate_tfrecord.py`文件，调整相应的代码将数据转换为 TensorFlow 所要求的文件。
 
-首先，统一文件夹目录形式：
+将以上两个文件放入到`object_detection/`中，并在该文件夹下新建`data/`和`training/`文件夹。现在结构如下所示。
 ```
--object_detection
+-object_detection/
  -data/
  -images/
+  -train/
+   -trainingimages.jpg
+   -trainingimages.xml
   -test/
    -testingimages.jpg
-  -train/
-   -testingimages.jpg
-
+   -testingimages.xml
  -training
  -xml_to_csv.py
  -generate_tfrecord.py
