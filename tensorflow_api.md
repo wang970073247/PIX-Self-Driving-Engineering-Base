@@ -136,6 +136,7 @@ $ python3 labelImg.py
 
 
 - 下面以下载的`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`和`embedded_ssd_mobilenet_v1_coco.config`为例。
+    - 首先将`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`解压放到`object_detection`路径下。
     - 修改`embedded_ssd_mobilenet_v1_coco.config`原代码：
         ```
         ssd {
