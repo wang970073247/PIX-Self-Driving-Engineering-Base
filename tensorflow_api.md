@@ -135,8 +135,8 @@ $ python3 labelImg.py
 将 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 放在`data/`和`training/`文件夹中，并且解压 [模型](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) 文件
 
 
-- 修改以下载的`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`和`embedded_ssd_mobilenet_v1_coco.config`为例。
-    - 原代码：
+- 下面以下载的`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`和`embedded_ssd_mobilenet_v1_coco.config`为例。
+    - 修改`embedded_ssd_mobilenet_v1_coco.config`原代码：
         ```
         ssd {
           num_classes: 90
