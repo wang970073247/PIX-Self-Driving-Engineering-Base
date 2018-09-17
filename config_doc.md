@@ -1,6 +1,6 @@
 # 配置文件
 ## 检测器
-将训练好的检测器的所有文件（即 `frozen_inference_graph.pb` 所在路径下的所有文件）
+将训练好的检测器输出的部分文件（即 `frozen_inference_graph.pb` 所在路径下的所有文件）
 例：
 ```
 -checkpoint
@@ -11,7 +11,7 @@
 -pipeline.config
 ```
 ![folder](./img/folder.png)
-全部放到 `./tl_detector/light_classification/light_graph/` 中。并将 `./tl_detector` 所有文件夹移动到本地 `/home/up/Autoware/ros/src/`中。
+全部放到 `./tl_detector/light_classification/pix/` 中。并将 `./tl_detector` 所有文件夹移动到本地 `/home/up/Autoware/ros/src/`中。
 ## 其他文件
 1. 将 `./styx_msgs/` 移动到 `/home/up/Autoware/ros/src/`
 2. 将 `./mindvision/` 移动到 `/home/up/Autoware/ros/src/`
