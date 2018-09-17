@@ -1,8 +1,11 @@
 # 配置文件
 ## 检测器
-将训练好的检测器输出的部分文件（即 `frozen_inference_graph.pb` 所在路径下的所有文件）
+将`pix/`文件夹下的所有文件（即 `frozen_inference_graph.pb` 所在路径下的所有文件）
 例：
 ```
+-saved_model/
+ +variables/
+ -saved_model.pb
 -checkpoint
 -frozen_inference_graph.pb
 -model.ckpt.data-00000-of-00001
@@ -10,7 +13,7 @@
 -model.ckpt.meta
 -pipeline.config
 ```
-![folder](./img/folder.png)
+![pix_model](./img/pix_model.png)
 全部放到 `./tl_detector/light_classification/pix/` 中。并将 `./tl_detector` 所有文件夹移动到本地 `/home/up/Autoware/ros/src/`中。
 ## 其他文件
 1. 将 `./styx_msgs/` 移动到 `/home/up/Autoware/ros/src/`
