@@ -12,11 +12,16 @@ $ sudo add-apt-repository ppa:graphics-drivers/ppa
 遇到提示按`Enter`
 ```bash
 $ sudo apt-get update 
-$ sudo apt-get install nvidia-367 
+$ sudo apt-get install nvidia-390
 $ sudo apt-get install mesa-common-dev 
 $ sudo apt-get install freeglut3-dev
 ```
 重启系统让显卡驱动生效。
+
+查看显卡驱动是否安装好：
+$ sudo lshw -c video | grep configuration
+当看到 driver=nvidia 生效
+
 
 ### 卸载 CUDA (Optional)
 ```bash
