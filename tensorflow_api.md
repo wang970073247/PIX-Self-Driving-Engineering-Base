@@ -319,7 +319,9 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ## 测试
 利用官网 [notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb) 修改相关测试图片的代码做一遍测试。
 
-首先将一些红绿灯的测试图片放入`models/research/object_detection/test_images/`下。然后修改 `models/research/object_detection/object_detection_tutorial.ipynb`部分代码。
+首先将一些红绿灯的测试图片放入`models/research/object_detection/test_images/`下，修改文件名为`image<number>.jpg`。
+
+修改 `models/research/object_detection/object_detection_tutorial.ipynb`部分代码。
 - 原代码
 ```notebook
 # What model to download.
@@ -352,7 +354,11 @@ NUM_CLASSES = 3
 
 在`Detection`模块中，修改测试图片的编号。
 
-最后运行整个程序。若测试结果很理想，就可以进行下一步，[配置相关文件](./config_doc.md)。
+最后运行整个程序。
+![green](./img/green.png)
+![red](./img/red.png)
+![nothing](./img/nothing.png)
+若测试结果很理想，就可以进行下一步，[配置相关文件](./config_doc.md)。
 
 
 
