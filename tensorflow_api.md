@@ -135,8 +135,8 @@ $ python3 labelImg.py
 将 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 放在`data/`和`training/`文件夹中，并且解压 [模型](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) 文件
 
 
-- 下面以下载的`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`和`embedded_ssd_mobilenet_v1_coco.config`为例。
-    - 首先将`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`解压放到`object_detection`路径下。
+- 下面以下载的`ssd_inception_v2_coco_2018_01_28.tar.gz`和`ssd_inception_v2_coco.config`为例。
+    - 首先将`sssd_inception_v2_coco_2018_01_28.tar.gz`解压放到`object_detection`路径下。
     - 修改`embedded_ssd_mobilenet_v1_coco.config`原代码：
         ```
         ssd {
@@ -169,7 +169,7 @@ $ python3 labelImg.py
         改为：
         
         ```
-        fine_tune_checkpoint: "ssd_mobilenet_v1_coco_2018_01_28/model.ckpt"
+        fine_tune_checkpoint: "ssd_inception_v2_coco_2018_01_28/model.ckpt"
         ```
 
     - 原代码：
@@ -281,7 +281,7 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 $ tensorboard --logdir='training/'
 ```
-在浏览器中地址栏输入 `127.0.0.1:6006 `，你讲会看到实时的训练过程。
+在浏览器中地址栏输入 `http://<host_name>:6006 `，你讲会看到实时的训练过程。
 
 ## 输出
 将自己新建的`/object_detection`中的内容放入到 [官网](https://github.com/tensorflow/models/tree/master/research/object_detection) 中进行合并。可以找到其中`export_inference_graph.py`的文件。
