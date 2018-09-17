@@ -169,7 +169,7 @@ $ python3 labelImg.py
         改为：
         
         ```
-        fine_tune_checkpoint: "/ssd_mobilenet_v1_coco_2018_01_28/model.ckpt"
+        fine_tune_checkpoint: "ssd_mobilenet_v1_coco_2018_01_28/model.ckpt"
         ```
 
     - 原代码：
