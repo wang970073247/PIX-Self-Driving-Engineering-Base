@@ -5,7 +5,7 @@
 - 安装 cuDNN
 - 安装 TensorFlow
 ### 显卡驱动
-以安装 Nvidia 驱动 367.27 为例：
+以安装 Nvidia 驱动 390.87 为例：
 ```bash
 $ sudo add-apt-repository ppa:graphics-drivers/ppa
 ```
