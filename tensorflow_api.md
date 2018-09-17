@@ -352,7 +352,7 @@ NUM_CLASSES = 3
 ```
 删除`Download Model`模块。
 
-在`Detection`模块中，修改测试图片的编号。最后运行整个程序。
+在`Detection`模块中，修改测试图片的编号，如`range(3, 6)`。最后运行整个程序。
 ![green](./img/green.png)
 ![red](./img/red.png)
 ![nothing](./img/nothing.png)
