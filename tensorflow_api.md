@@ -136,8 +136,8 @@ $ python3 labelImg.py
 
 
 - 下面以下载的`ssd_inception_v2_coco_2018_01_28.tar.gz`和`ssd_inception_v2_coco.config`为例。
-    - 首先将`sssd_inception_v2_coco_2018_01_28.tar.gz`解压放到`object_detection`路径下。
-    - 修改`embedded_ssd_mobilenet_v1_coco.config`原代码：
+    - 首先将`ssd_inception_v2_coco_2018_01_28.tar.gz`解压放到`object_detection`路径下。
+    - 修改`ssd_inception_v2_coco.config`原代码：
         ```
         ssd {
           num_classes: 90
@@ -314,11 +314,12 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 # switch back to object_detection after this and re run the above command
 ```
 执行后回到 `tensorflow/models/tree/master/research/object_detection/`目录下，重新执行上述程序。
-若执行成功会有 `/pix` 的文件夹，其中，`frozen_inference_graph.pb`很重要。
+若执行成功会有 `pix/` 的文件夹，其中，`frozen_inference_graph.pb`很重要。
+![pix_model](./img/pix_model.png)
 ## 测试
 利用官网 [notebook](https://github.com/tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb) 修改相关测试图片的代码做一遍测试。
 
-首先将一些红绿灯的测试图片放入`tensorflow/models/tree/master/research/object_detection/test_images/`下。然后修改 tensorflow/models/blob/master/research/object_detection/object_detection_tutorial.ipynb 部分代码。
+首先将一些红绿灯的测试图片放入`models/research/object_detection/test_images/`下。然后修改 `models/research/object_detection/object_detection_tutorial.ipynb`部分代码。
 - 原代码
 ```notebook
 # What model to download.
