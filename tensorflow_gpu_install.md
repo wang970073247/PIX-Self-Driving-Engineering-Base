@@ -27,7 +27,7 @@ $ sudo lshw -c video | grep configuration
 ```bash
 $ sudo apt autoremove cuda
 $ cd /usr/local/
-$ rm -rf cuda-<x.x>/
+$ sudo rm -rf cuda-<x.x>/
 ```
 `<x.x>` 代表版本号 如 `8.0`
 ### 安装 CUDA
