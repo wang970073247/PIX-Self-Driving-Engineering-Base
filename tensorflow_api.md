@@ -281,7 +281,8 @@ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 $ tensorboard --logdir='training/'
 ```
-在浏览器中地址栏输入 `http://<host_name>:6006 `，你讲会看到实时的训练过程。
+在浏览器中地址栏输入 `http://<host_name>:6006 `，你讲会看到实时的训练过程。比如下图所示：
+![tensorboard](./img/tensorboard.png)
 
 ## 输出
 将自己新建的`/object_detection`中的内容放入到 [官网](https://github.com/tensorflow/models/tree/master/research/object_detection) 中进行合并。可以找到其中`export_inference_graph.py`的文件。
