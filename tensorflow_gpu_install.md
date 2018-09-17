@@ -22,7 +22,7 @@ $ sudo apt-get install freeglut3-dev
 ```
 $ sudo lshw -c video | grep configuration
 ```
-当看到 driver=nvidia 生效
+当看到`driver=nvidia`生效
 
 
 ### 卸载 CUDA (Optional)
