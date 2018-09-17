@@ -232,7 +232,7 @@ item {
 目前，整个训练的文件树模型为：
 ```
 -object_detection/
- +ssd_mobilenet_v1_coco_2018_01_28/
+ +ssd_inception_v2_coco_2018_01_28/
  -data/
   -train_labels.csv
   -test_labels.csv
