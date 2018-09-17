@@ -1,4 +1,8 @@
 ## TensorFlow API 配置
+首先在终端下载 TensorFlow 官网的 API repo。
+```bash
+git clone https://github.com/tensorflow/models/
+```
 Tensorflow 目标检测 Demo [地址](https://github.com/tensorflow/models/tree/master/research/object_detection)。
 根据配置教程，跑通 TensorFlow 目标检测的 notebook。
 ## 采集训练需要用的真实图片。
