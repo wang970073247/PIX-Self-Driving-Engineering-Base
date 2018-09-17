@@ -12,7 +12,7 @@ $ sudo add-apt-repository ppa:graphics-drivers/ppa
 遇到提示按`Enter`
 ```bash
 $ sudo apt-get update 
-$ sudo apt-get install nvidia-396.54
+$ sudo apt-get install nvidia-396
 $ sudo apt-get install mesa-common-dev 
 $ sudo apt-get install freeglut3-dev
 ```
