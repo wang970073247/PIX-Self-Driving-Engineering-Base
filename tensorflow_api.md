@@ -122,6 +122,11 @@ $ python3 labelImg.py
     $ python3 generate_tfrecord.py --csv_input=data/train_labels.csv  --output_path=data/train.record
     $ python3 generate_tfrecord.py --csv_input=data/test_labels.csv  --output_path=data/test.record
     ```
+    若出现错误，请回到刚才`git clone`下载得到的文件夹下`models/research/`路径下，打开终端执行：
+    ```bash
+    $ python3 setup.py install
+    ```
+    回到`object_detection/`目录下重新执行上述`python3`命令。
     这样，在文件夹`data/`下又会增加两个`.record`文件。
 
 ## 选择 TensorFlow 模型
