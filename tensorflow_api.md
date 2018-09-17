@@ -109,12 +109,12 @@ $ python3 labelImg.py
 通过运行脚本将数据转换为 TF_records 文件。
 
 ## 选择 TensorFlow 模型
-从 TensorFlow 模型库中找到合适的 [configuration 文件](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)，并找到对应的 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 下载。
+从 TensorFlow 模型库中找到合适的 [模型](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md)，并找到对应的 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 下载。
 
-将 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 放在`/training`文件夹中，并且解压 [configuration 文件](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) 文件
+将 [config 文件](https://github.com/tensorflow/models/tree/master/research/object_detection/samples/configs) 放在`data/`和`training/`文件夹中，并且解压 [模型](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) 文件
 
 
-- 修改 `.config`，以`embedded_ssd_mobilenet_v1_coco.config`为例，
+- 修改以下载的`ssd_mobilenet_v1_coco_2018_01_28.tar.gz`和`embedded_ssd_mobilenet_v1_coco.config`为例。
     - 原代码：
         ```
         ssd {
@@ -147,7 +147,7 @@ $ python3 labelImg.py
         改为：
         
         ```
-        fine_tune_checkpoint: "/ssd_mobilenet_v1_coco_2018_01_28.tar/model.ckpt"
+        fine_tune_checkpoint: "/ssd_mobilenet_v1_coco_2018_01_28/model.ckpt"
         ```
 
     - 原代码：
@@ -184,7 +184,7 @@ $ python3 labelImg.py
         ```
         eval_input_reader: {
         tf_record_input_reader {
-        input_path: "data/train.record"
+        input_path: "data/test.record"
         }
         label_map_path: "data/object-detection.pbtxt"
         }
@@ -207,10 +207,39 @@ item {
 }
 ```
 ## 训练
-在`/object_detection`目录下打开终端：
+目前，整个训练的文件树模型为：
+```
+-object_detection/
+ +ssd_mobilenet_v1_coco_2018_01_28/
+ -data/
+  -train_labels.csv
+  -test_labels.csv
+  -train.record
+  -test.record
+  -object-detection.pbtxt
+ -images/
+  -train/
+   -trainingimages.jpg
+   -trainingimages.xml
+  -test/
+   -testingimages.jpg
+   -testingimages.xml
+ -training
+  -object-detection.pbtxt
+  -embedded_ssd_mobilenet_v1_coco.config
+ -xml_to_csv.py
+ -generate_tfrecord.py
+```
+下载 TensorFlow 官方教程
+```bash
+git clone https://github.com/tensorflow/models
+```
+
+将`object_detection/`下所有文件复制粘贴在`models/research/object_detection/legacy/`目录下
+在`legacy/`目录下打开终端：
 
 ```bash
-$ python3 train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/embedded_ssd_mobilenet_v1_coco.config
+$ python3 train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/embedded_ssd_mobilenet_v1_coco.config.config
 ```
 若执行成功，将会看到：
 ```
@@ -221,9 +250,9 @@ INFO:tensorflow:global step 11791: loss = 0.7758 (0.460 sec/step)
 INFO:tensorflow:global step 11792: loss = 0.7164 (0.378 sec/step)
 INFO:tensorflow:global step 11793: loss = 0.8096 (0.393 sec/step)
 ```
-在`/object_detection`，在打开一个终端：
+在`legacy/`，打开终端：
 ```
-$ tensorboard --logdir='training'
+$ tensorboard --logdir='training/'
 ```
 在浏览器中地址栏输入 `127.0.0.1:6006 `，你讲会看到实时的训练过程。
 
@@ -237,22 +266,15 @@ python export_inference_graph \
     --trained_checkpoint_prefix path/to/model.ckpt \
     --output_directory path/to/exported_model_directory
 ```
-  调整为：
+  调整并在该路径终端下执行：
 ```
 python3 export_inference_graph.py \
     --input_type image_tensor \
-    --pipeline_config_path training/embedded_ssd_mobilenet_v1_coco.config \
-    --trained_checkpoint_prefix training/model.ckpt<latest_number.meta> \
-    --output_directory pix
+    --pipeline_config_path legacy/training/embedded_ssd_mobilenet_v1_coco.config \
+    --trained_checkpoint_prefix legacy/training/model.ckpt<latest_number.meta> \
+    --output_directory pix/
 ```
-将调整后的代码复制，在当前目录下打开终端，执行：
 
-```bash
-$ python3 export_inference_graph.py \
-        --input_type image_tensor \
-        --pipeline_config_path training/embedded_ssd_mobilenet_v1_coco.config \
-        --trained_checkpoint_prefix training/model.ckpt<latest_number.meta> \
-        --output_directory pix
 ```
     
 若执行中出现错误，`no module named 'nets'`，转换地址打开终端，执行：
