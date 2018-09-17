@@ -25,7 +25,7 @@ $ sudo lshw -c video | grep configuration
 
 ### 卸载 CUDA (Optional)
 ```bash
-$ apt autoremove cuda
+$ sudo apt autoremove cuda
 $ cd /usr/local/
 $ rm -rf cuda-<x.x>/
 ```
